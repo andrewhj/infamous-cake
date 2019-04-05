@@ -10,6 +10,10 @@ addCommandAlias("root", "project todo")
 
 addCommandAlias("cd", "project")
 
+addCommandAlias("ls", "projects")
+
+scalacOptions in ThisBuild += "-unchecked"
+
 shellPrompt := (_ => fancyPrompt(name.value))
 
 def fancyPrompt(projectName : String): String =
